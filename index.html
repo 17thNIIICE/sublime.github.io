@@ -103,10 +103,10 @@
                     <section class="featuredProject-section">
                         <h2><span class="s-letter">F</span>eature<span class="underline">d Projects</span></h2>
                             <ul class="searchedFeed__filter">
-                                <li class="searchedFeed__filter__item"><a href="#">All Works</a></li>
-                                <li class="searchedFeed__filter__item"><a href="#">Games</a></li>
-                                <li class="searchedFeed__filter__item"><a href="#">Applications</a></li>
-                                <li class="searchedFeed__filter__item"><a href="#">Content development</a></li>
+                                <li class="searchedFeed__filter__item"><a href="javascript:void(0)">All Works</a></li>
+                                <li class="searchedFeed__filter__item"><a href="javascript:void(0)">Games</a></li>
+                                <li class="searchedFeed__filter__item"><a href="javascript:void(0)">Applications</a></li>
+                                <li class="searchedFeed__filter__item"><a href="javascript:void(0)">Content development</a></li>
                             </ul>
                         <div class="productFeed">
                             <img class="productFeed__item" src="./img/contentImage1.png" alt="product">
@@ -316,12 +316,12 @@
                         <div class="footer-section__wrapper">
                                 <h2><span class="s-letter">C</span>ontact Us</h2>
                                 <div class="submit-form">
-                                    <form class="form-wrapper" name="userinfo" method="post">
-                                        <input type="text" name="username" placeholder="Your Name" value="" class="userinput">
-                                        <input type="text" name="phonenumber" placeholder="Mobile" value="" class="userinput">
-                                        <input type="text" name="useremail" placeholder="Email" class="userinput">
-                                        <textarea name="message" cols="40" rows="5" placeholder="Message"></textarea>   
-                                        <button class="submit-button" type="submit">SEND</button>
+                                    <form id="form" class="form-wrapper" name="userinfo" method="post">
+                                        <input class="userinput _required" type="text" name="username" placeholder="Your Name" value="">
+                                        <input class="userinput _required _phoneNumber"type="text" name="phonenumber" placeholder="Mobile" value="">
+                                        <input class="userinput _required _email" type="text" name="useremail" placeholder="Email">
+                                        <textarea class="userinput _required" name="message" cols="40" rows="5" placeholder="Message"></textarea>   
+                                        <button class="submit-button" type="submit">send</button>
                                     </form>
                                 </div>
                                 <div class="contac-info__wrapper">
@@ -364,6 +364,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/aos.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

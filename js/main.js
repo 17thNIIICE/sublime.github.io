@@ -1,3 +1,78 @@
+"use strict"
+
+//FILTER
+const filterBox = document.querySelectorAll('._filter-item');
+
+document.querySelector('.searchedFeed__filter').addEventListener('click', event => {
+    if(event.target.querySelectorAll !== '.searchedFeed__filter__item') return false;
+
+    let filterClass = event.target.dataset['f'];
+    console.log(filterClass);
+
+    filterBox.forEach( elem => {
+        elem.classList.remove('_filter-hide');
+        if (!elem.classList.contains(fiterClass) && filterClass != 'all'){
+            elem.classList.add('_filter-hide');
+        }
+    })
+});
+//FORM VALID
+document.addEventListener('DOMContentLoaded', function(){
+    const form = document.getElementById('form');
+    form.addEventListener('submit', formSend);
+
+    async function formSend(e) {
+        e.preventDefault();
+
+        let error = formValidate(form);
+
+    }
+
+    function formValidate(form) {
+        let error = 0;
+        let formReq = document.querySelectorAll('._required');
+
+        for (let index = 0; index < formReq.length; index++) {
+            const input = formReq[index];
+            formRemoveError(input);
+
+            if(input.classList.contains('_email')){
+                if (emailTest(input)){
+                    formAddError(input);
+                    error++;
+                }
+            }else if(input.classList.contains('_phoneNumber')){
+                if (phoneNumberTest(input)){
+                    formAddError(input);
+                    error++
+                }
+            }else {
+                if (input.value === '') {
+                    formAddError(input);
+                    error++;
+                }
+            }
+        }
+    }
+
+    function formAddError(input) {
+        input.parentElement.classList.add('_error');
+        input.classList.add('_error')
+    }
+    function formRemoveError(input) {
+        input.parentElement.classList.remove('_error');
+        input.classList.remove('_error');
+    }
+    //EMAIL TEST
+    function emailTest(input){
+        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+    }
+    //PHONE NUMBER TEST
+    function phoneNumberTest(input){
+        return !/^\d[\d\(\)\ -]{4,12}\d$/.test(input.value);
+    }
+})
+
 //POPUP-WINDOW'es
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
@@ -57,3 +132,4 @@ document.addEventListener('keydown', function (e){
         popupClose(popupActive);
     }
 })
+AOS.init();
