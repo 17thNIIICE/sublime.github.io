@@ -183,7 +183,21 @@ h1 {
     display:flex;
     flex-wrap:wrap;
     justify-content: space-around;
-    margin-top:60px;
+}
+.swiper {
+    width: 75vw;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.swiper-slide{
+    display: flex;
+    justify-content: space-around;
+}
+.swiper-pagination{
+    position:static;
+    margin-top: 70px;
 }
 .info-card-block__item{
     text-align: center;
@@ -251,7 +265,7 @@ h1 {
     width: 25%;
     margin:0px 0px 2px 0px;
     padding:0;
-}
+} 
 /*======== Strategic Process-section ========*/
 .strategicProcess-section{
     margin: 0;

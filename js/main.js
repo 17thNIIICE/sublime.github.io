@@ -1,21 +1,12 @@
 "use strict"
-
-//FILTER
-const filterBox = document.querySelectorAll('._filter-item');
-
-document.querySelector('.searchedFeed__filter').addEventListener('click', event => {
-    if(event.target.querySelectorAll !== '.searchedFeed__filter__item') return false;
-
-    let filterClass = event.target.dataset['f'];
-    console.log(filterClass);
-
-    filterBox.forEach( elem => {
-        elem.classList.remove('_filter-hide');
-        if (!elem.classList.contains(fiterClass) && filterClass != 'all'){
-            elem.classList.add('_filter-hide');
-        }
-    })
-});
+var swiper = new Swiper(".mySwiper", {
+    speed: 1000,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 //FORM VALID
 document.addEventListener('DOMContentLoaded', function(){
     const form = document.getElementById('form');
