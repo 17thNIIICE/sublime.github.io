@@ -40,20 +40,15 @@ body {
 }
 
 body {
+  background: url("../img/headerbg.png") no-repeat;
+  background-size: cover;
   font-family: "Myriad Pro", Arial, sans-serif;
   background-color: #161616;
 }
 body.lock {
   overflow: hidden;
-  padding-right: 0px;
+  padding-right: 0;
 }
-
-.background-image {
-  background: url("../img/headerbg.jpg") no-repeat;
-  background-size: cover;
-  max-height: 1049px;
-}
-
 .body-wrapper {
   overflow: hidden;
   display: flex;
@@ -66,7 +61,6 @@ body.lock {
 .intro-text {
   margin-left: 75px;
   margin-bottom: 65px;
-  /* max-width:50%; */
 }
 h1 {
   font-size: 202px;
@@ -128,7 +122,6 @@ h1 {
 }
 .nav-menu a:hover {
   color: #f3f3f3;
-  text-decoration: none;
   border-bottom: 2px #ffc600 solid;
 }
 .menu-text h2 {
@@ -154,7 +147,7 @@ h1 {
   padding-bottom: 15px;
   min-height: 571px;
 }
-.aboutSublime-section__wrapper {
+.aboutSublime-section > .wrapper {
   display: flex;
   justify-content: space-between;
 }
