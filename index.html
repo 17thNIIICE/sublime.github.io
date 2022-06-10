@@ -15,6 +15,8 @@
       src="https://kit.fontawesome.com/b4ee512263.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/addons/cleave-phone.by.js"></script>
   </head>
   <body data-aos="fade-up">
       <div class="body-wrapper">
@@ -31,6 +33,7 @@
                 representation.
               </p>
               <a
+                id="popup-link"
                 class="download-link popup-link"
                 href="#popup"
                 data-aos="fade-right"
@@ -392,6 +395,8 @@
                 </div>
               </div>
             </section>
+
+
             <section class="serviceProvided-section" data-aos="fade-up">
               <h2 data-aos="fade-right">
                 <span class="s-letter">S</span>ervice
@@ -442,6 +447,8 @@
                 </div>
               </div>
             </section>
+
+
             <section class="ourTeam-section" data-aos="fade-up">
               <div class="ourTeam-section__flex-container">
                 <h2 data-aos="fade-right">
@@ -495,6 +502,8 @@
                 </div>
               </div>
             </section>
+
+
             <section class="reviews" data-aos="fade-up">
               <div class="reviews-wrapper">
                 <h2>
@@ -604,6 +613,7 @@
                     class="form-wrapper"
                     name="userinfo"
                     method="post"
+                    data-parsley-validate=""
                   >
                     <input
                       class="userinput _required"
@@ -611,26 +621,31 @@
                       name="username"
                       placeholder="Your Name"
                       value=""
+                      required=""
                     />
                     <input
-                      class="userinput _required _phoneNumber"
+                      class="input-phone userinput"
                       type="text"
                       name="phonenumber"
                       placeholder="Mobile"
                       value=""
+                      required=""
                     />
                     <input
-                      class="userinput _required _email"
+                      class="userinput"
                       type="text"
                       name="useremail"
                       placeholder="Email"
+                      required=""
+                      data-parsley-trigger="change"
                     />
                     <textarea
-                      class="userinput _required"
+                      class="userinput"
                       name="message"
                       cols="40"
                       rows="5"
                       placeholder="Message"
+                      required=""
                     ></textarea>
                     <button class="submit-button" type="submit">send</button>
                   </form>
@@ -680,26 +695,25 @@
       <div class="popup-window__body">
         <div class="popup-window__content">
           <a
+            id="close-button"
             href="#header"
             class="popup-window__content-close close-popup__button"
-            ><i class="fa-solid fa-xmark"></i
-          ></a>
-          <div class="popup-title">
-            <h2>Скачивание по ссылке</h2>
-          </div>
-          <div class="popup-text">
-            <a
-              href="https://drive.google.com/drive/folders/1EeQvYYTLtlrxq97cT2RQZqRAnwhfdwEx"
-            >
-              https://drive.google.com/drive/folders/1EeQvYYTLtlrxq97cT2RQZqRAnwhfdwEx
-            </a>
-          </div>
+          >
+          <i class="fa-solid fa-xmark"></i>
+          </a>
+          <h2>Скачивание по ссылке</h2>
+          <a
+            href="https://drive.google.com/drive/folders/1EeQvYYTLtlrxq97cT2RQZqRAnwhfdwEx"
+          >
+            Download
+          </a>
         </div>
-      </div>
+      </div>   
     </div>
 
-
     <script src="./js/aos.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="parsley.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
