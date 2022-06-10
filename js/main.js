@@ -22,7 +22,7 @@ $(document).ready(function(){
     })
 })
 
-//Formatting phone number via Cleave
+//Formatting phone number via Cleave, validation via parsley
 $(document).ready(function(){
     var cleave = new Cleave('.input-phone', {
         phone: true,
