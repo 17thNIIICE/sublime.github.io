@@ -25,7 +25,6 @@ $(document).ready(function(){
     $("#close-button").click(function(){
         $("#popup").hide(200);
     })
-    //Parsley
     $('#form').parsley().on('field:validated', function(){
         var ok = $('parsley-error').Length === 0;
     }).on('form:submit', function(){
