@@ -48,17 +48,17 @@
               </div>
               <nav class="main-menu__nav">
                 <ul class="nav-menu">
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Development</a></li>
-                  <li><a href="#">Projects</a></li>
-                  <li><a href="#">Blog</a></li>
+                  <li><a href="#main">About</a></li>
+                  <li><a href="#development">Development</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#blog">Blog</a></li>
                 </ul>
               </nav>
             </div>
         </header>
 
 
-        <main class="main main-page" data-aos="fade-up">
+        <main id="main" class="main main-page" data-aos="fade-up">
 
             <section class="about-cite aboutSublime-section" data-aos="fade-up">
               <div class="wrapper">
@@ -232,7 +232,7 @@
             </section>
 
 
-            <section class="projects featuredProject-section" data-aos="fade-up">
+            <section id="projects" class="projects featuredProject-section" data-aos="fade-up">
               <h2 data-aos="fade-right">
                 <span class="s-letter">F</span>eature<span class="underline"
                   >d Projects</span
@@ -297,12 +297,9 @@
             </section>
 
             
-            <section
-              class="strategicProcess strategicProcess-section"
-              data-aos="fade-up"
-            >
-              <div class="strategicProcess-section__intro-text">
-                <h2 data-aos="fade-right">
+            <section id="development" class="about-develompent strategicProcess strategicProcess-section" data-aos="fade-up">
+              <div class="about-development__intro-text strategicProcess-section__intro-text">
+                <h2 class="about-development__title" data-aos="fade-right">
                   <span class="s-letter">S</span>trategi<span class="underline"
                     >c Process</span
                   >
@@ -336,8 +333,8 @@
                 </p>
               </div>
               <div class="section-desciption__wrapper">
-                <div class="section-desciption">
-                  <div class="section-desciption__block">
+                <div class="about-develompent__description section-desciption">
+                  <div class="about-develompent__description-item section-desciption__block">
                     <img src="./img/contentImage9.png" alt="content-image" />
                     <div class="section-desciption__block__text-wrapper">
                       <h3>Our Process</h3>
@@ -356,7 +353,7 @@
                       </p>
                     </div>
                   </div>
-                  <div class="section-desciption__block">
+                  <div class="about-develompent__description-item section-desciption__block">
                     <img
                       class="reversed-image"
                       src="./img/contentImage10.png"
@@ -376,7 +373,7 @@
                       </p>
                     </div>
                   </div>
-                  <div class="section-desciption__block">
+                  <div class="about-develompent__description-item section-desciption__block">
                     <img src="./img/contentImage11.png" alt="content-image" />
                     <div class="section-desciption__block__text-wrapper">
                       <h3>Outcome</h3>
@@ -530,7 +527,9 @@
                 </figcaption>
               </figure>
             </section>
-            <section class="blogs-section" data-aos="fade-up">
+
+
+            <section id="blog" class="blogs-section" data-aos="fade-up">
               <div class="blog-search__feed">
                 <div class="blog-wrapper-section">
                   <h2><span class="s-letter">B</span>logs</h2>
